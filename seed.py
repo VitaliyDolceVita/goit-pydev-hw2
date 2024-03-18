@@ -6,6 +6,7 @@ faker = Faker()
 
 # Підключення до вашої PostgreSQL бази даних
 conn = psycopg2.connect(dbname="ave", user="postgres", password="pass")
+conn.set_client_encoding('UTF8')
 cur = conn.cursor()
 
 # Створення випадкових статусів
