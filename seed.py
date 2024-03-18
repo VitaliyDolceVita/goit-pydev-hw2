@@ -5,7 +5,7 @@ import random
 faker = Faker()
 
 # Підключення до вашої PostgreSQL бази даних
-conn = psycopg2.connect(dbname="ave", user="postgres", password="4891")
+conn = psycopg2.connect(dbname="ave", user="postgres", password="pass")
 cur = conn.cursor()
 
 # Створення випадкових статусів
