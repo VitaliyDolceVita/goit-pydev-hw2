@@ -62,4 +62,4 @@ SELECT * FROM tasks WHERE description IS NULL OR description = '';
 SELECT u.*, t.* FROM users u JOIN tasks t ON u.id = t.user_id WHERE t.status_id = (SELECT id FROM status WHERE name = 'in progress');
     
 Отримати користувачів та кількість їхніх завдань:
-SELECT u.fullname, COUNT(t.id) FROM users u LEFT JOIN tasks t ON u.id = t.user_id GROUP B
+SELECT u.fullname, COUNT(t.id) FROM users u LEFT JOIN tasks t ON u.id = t.user_id GROUP BY u.id, u.fullname; 
